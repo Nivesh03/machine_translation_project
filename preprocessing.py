@@ -25,7 +25,7 @@ for line in lines[:501]:
   input_docs.append(input_doc)
 
   target_doc = " ".join(re.findall(r"[\w']+|[^\s\w]", target_doc))
-  # Redefine target_doc below
+  # Redefine target_doc 
   # and append it to target_docs:
   target_doc = '<START> ' + target_doc + ' <END>'
   target_docs.append(target_doc)
@@ -33,13 +33,9 @@ for line in lines[:501]:
   # Now we split up each sentence into words
   # and add each unique word to our vocabulary set
   for token in re.findall(r"[\w']+|[^\s\w]", input_doc):
-    # print(token)
-    # Add your code here:
     if token not in input_tokens:
       input_tokens.add(token)
   for token in target_doc.split():
-    # print(token)
-    # And here:
     if token not in target_tokens:
       target_tokens.add(token)
 
@@ -87,4 +83,4 @@ for line, (input_doc, target_doc) in enumerate(zip(input_docs, target_docs)):
 
       decoder_target_data[line, timestep - 1, target_features_dict[token]] = 1.
 
-# print out those value here:
+
