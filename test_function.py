@@ -62,7 +62,7 @@ def decode_sequence(test_input):
   return decoded_sentence
 
 
-# CHANGE RANGE (NUMBER OF TEST SENTENCES TO TRANSLATE) AS YOU PLEASE
+# NUMBER OF TEST SENTENCES TO TRANSLATE
 for seq_index in range(100):
   test_input = encoder_input_data[seq_index: seq_index + 1]
   decoded_sentence = decode_sequence(test_input)
