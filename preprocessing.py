@@ -16,8 +16,8 @@ target_docs = []
 input_tokens = set()
 target_tokens = set()
 
-# Adjust the number of lines so that
-# preprocessing doesn't take too long for you
+# Adjusting the number of lines so that
+# preprocessing doesn't take too long 
 for line in lines[:501]:
   # Input and target sentences are separated by tabs
   input_doc, target_doc = line.split('\t')[:2]
